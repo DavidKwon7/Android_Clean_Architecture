@@ -26,6 +26,10 @@ abstract class MapperModule {
     @Binds
     abstract fun bindCommentNetworkDataMapper(mapper: CommentNetworkDataMapper): Mapper<CommentNetworkModel, CommentDataModel>
 
-
+   // data
+    @Binds
+    abstract fun bindPostDataMapper(mapper: PostDataDomainMapper): Mapper<PostDataModel, PostEntityModel>
+    @Binds
+    abstract fun bindCommentDataMapper(mapper: CommentDataDomainMapper): Mapper<CommentDataModel, CommentEntityModel>
 
 }
