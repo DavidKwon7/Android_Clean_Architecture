@@ -16,3 +16,4 @@ rootProject.name = "Android_Clean_Architecture"
 include ':app'
 include ':base'
 include ':common'
+include ':data'
