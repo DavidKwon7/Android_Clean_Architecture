@@ -54,6 +54,7 @@ class RepositoryImpTest {
             Truth.assertThat(expectedData).containsExactlyElementsIn(postMapper.fromList(posts))
             expectComplete()
         }
+        // 객체의 메서드가 호출되었는지의 여부를 확인하기 위해 Verify 를 사용한다.
         coVerify { remoteDataSource.getPosts() }
     }
 
