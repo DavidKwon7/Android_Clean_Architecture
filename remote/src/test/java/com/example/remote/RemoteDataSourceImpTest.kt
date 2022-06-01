@@ -53,4 +53,21 @@ class RemoteDataSourceImpTest {
         remoteDataSource.getPosts()
         coVerify { apiService.getPosts() }
     }
+
+    @Test
+    fun test_get_post_comments_success() = runBlocking {
+        val commentNetwork = TestDataGenerator.generatePostComments()
+        coEvery { apiService.getPostComments(any()) } returns commentNetwork
+        val result = remoteDataSource.getPostComments(1)
+        coVerify { apiService.getPostComments(any()) }
+        val expected = commentNetworkDataMapper.fromList(commentNetwork)
+        Truth.assertThat(result).containsExactlyElementsIn(expected)
+    }
+
+    @Test
+    fun test_get_post_comments_fail() = runBlocking {
+        coEvery { apiService.getPostComments(any()) } throws Exception()
+        remoteDataSource.getPostComments(1)
+        coVerify { apiService.getPostComments(any()) }
+    }
 }
