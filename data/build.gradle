@@ -85,4 +85,10 @@ dependencies {
     testImplementation("androidx.room:room-testing:$roomVersion")
     // optional - Paging 3 Integration
     implementation("androidx.room:room-paging:2.5.0-alpha01")
+
+    // MockK
+    def mockk_version = "1.10.1"
+    testImplementation "io.mockk:mockk:$mockk_version"
+    androidTestImplementation "io.mockk:mockk-android:$mockk_version"
+
 }
