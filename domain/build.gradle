@@ -86,4 +86,22 @@ dependencies {
     // optional - Paging 3 Integration
     implementation("androidx.room:room-paging:2.5.0-alpha01")
 
+    // MockK
+    def mockk_version = "1.10.1"
+    testImplementation "io.mockk:mockk:$mockk_version"
+    androidTestImplementation "io.mockk:mockk-android:$mockk_version"
+
+    // testImplementation 'app.cash.turbine:turbine:0.8.0'
+    testImplementation 'app.cash.turbine:turbine:0.6.0'
+
+    /**
+     * 정확한 선언 방법을 기억해두자
+     */
+    // androidTestImplementation "com.google.truth:truth:1.1.3"
+    testImplementation "com.google.truth:truth:1.1.3"
+
+    // test coroutine
+    // https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-test
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1")
+
 }
