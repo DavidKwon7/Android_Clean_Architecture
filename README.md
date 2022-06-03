@@ -2,14 +2,14 @@
 코루틴 + Unit Test 연습을 위해 만들어진 앱 (클론 코딩)
 
 # 사용한기술
+- Kotlin
 - AndroidX
   - Activity
   - Constraint Layout
   - Life cycle
 - Hilt
 - RecyclerView
-- Kotlin
-- retrofit
+- Retrofit
 - OkHttp
 - Coroutine
 - Clean Architecture
