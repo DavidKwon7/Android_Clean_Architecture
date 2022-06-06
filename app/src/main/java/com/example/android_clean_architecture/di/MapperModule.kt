@@ -20,13 +20,18 @@ import dagger.hilt.components.SingletonComponent
 @InstallIn(SingletonComponent::class)
 abstract class MapperModule {
 
-    // remote
+    /**
+     * [remote] mapper
+     */
     @Binds
     abstract fun bindPostNetworkDataMapper(mapper: PostNetworkDataMapper): Mapper<PostNetworkModel, PostDataModel>
     @Binds
     abstract fun bindCommentNetworkDataMapper(mapper: CommentNetworkDataMapper): Mapper<CommentNetworkModel, CommentDataModel>
 
-   // data
+
+    /**
+     * [data] mapper
+     */
     @Binds
     abstract fun bindPostDataMapper(mapper: PostDataDomainMapper): Mapper<PostDataModel, PostEntityModel>
     @Binds
