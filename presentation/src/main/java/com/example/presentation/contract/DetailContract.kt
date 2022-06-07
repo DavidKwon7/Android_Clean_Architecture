@@ -3,24 +3,23 @@ package com.example.presentation.contract
 import com.example.base.UiEffect
 import com.example.base.UiEvent
 import com.example.base.UiState
+import com.example.presentation.model.CommentUiModel
 import com.example.presentation.model.PostUiModel
 
 class DetailContract {
 
     sealed class Event: UiEvent {
-        object OnFetchPosts: Event()
-        data class OnPostItemClicked(val post: PostUiModel) : Event()
+        data class OnFetchPostComments(val post: PostUiModel?): Event()
     }
 
     data class State (
-        val postState: PostsState,
-        val selectedPost: PostUiModel? = null
+        val commentState: CommnetState
     ) : UiState
 
-    sealed class PostsState {
-        object Idle: PostsState()
-        object Loading: PostsState()
-        data class Success(val posts: List<PostUiModel>): PostsState()
+    sealed class CommnetState {
+        object Idle: CommnetState()
+        object Loading: CommnetState()
+        data class Success(val comments: List<CommentUiModel>) : CommnetState()
     }
 
     sealed class Effect: UiEffect {

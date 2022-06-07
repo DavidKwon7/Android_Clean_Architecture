@@ -1,5 +1,6 @@
 package com.example.presentation.vm
 
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.base.BaseViewModel
@@ -19,6 +20,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
+    private val savedStateHandle: SavedStateHandle,
     private val postsUseCase: GetPostsUseCase,
     private val postMapper: Mapper<PostEntityModel, PostUiModel>
 ): BaseViewModel<MainContract.Event, MainContract.State, MainContract.Effect>() {
