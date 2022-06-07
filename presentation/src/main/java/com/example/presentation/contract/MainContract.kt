@@ -2,6 +2,7 @@ package com.example.presentation.contract
 
 import com.example.base.UiEffect
 import com.example.base.UiEvent
+import com.example.base.UiState
 import com.example.presentation.model.PostUiModel
 
 
@@ -15,7 +16,7 @@ class MainContract {
     data class State(
         val postsState: PostsState,
         val selectedPost: PostUiModel? = null
-    )
+    ) : UiState
 
     sealed class PostsState {
         object Idle: PostsState()
