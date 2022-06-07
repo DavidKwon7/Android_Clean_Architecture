@@ -5,9 +5,9 @@ import com.example.domain.entity.CommentEntityModel
 import com.example.presentation.model.CommentUiModel
 import javax.inject.Inject
 
-class CommentDomainUiMapper @Inject constructor(): Mapper<CommentUiModel, CommentEntityModel> {
-    override fun from(i: CommentUiModel?): CommentEntityModel {
-        return CommentEntityModel(
+class CommentDomainUiMapper @Inject constructor(): Mapper<CommentEntityModel, CommentUiModel> {
+    override fun from(i: CommentEntityModel?): CommentUiModel {
+        return CommentUiModel(
             postId = i?.postId,
             id = i?.id,
             name = i?.name,
@@ -16,8 +16,8 @@ class CommentDomainUiMapper @Inject constructor(): Mapper<CommentUiModel, Commen
         )
     }
 
-    override fun to(o: CommentEntityModel?): CommentUiModel {
-        return CommentUiModel(
+    override fun to(o: CommentUiModel?): CommentEntityModel {
+        return CommentEntityModel(
             postId = o?.postId,
             id = o?.id,
             name = o?.name,
@@ -25,4 +25,5 @@ class CommentDomainUiMapper @Inject constructor(): Mapper<CommentUiModel, Commen
             body = o?.body
         )
     }
+
 }
