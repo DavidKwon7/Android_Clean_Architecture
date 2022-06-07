@@ -1,4 +1,4 @@
-package com.example.presentation
+package com.example.presentation.utils
 
 import com.example.presentation.model.CommentUiModel
 import com.example.presentation.model.PostUiModel
