@@ -5,10 +5,9 @@ import com.example.domain.entity.PostEntityModel
 import com.example.presentation.model.PostUiModel
 import javax.inject.Inject
 
-class PostDomainUiMapper @Inject constructor()
-    :Mapper<PostUiModel, PostEntityModel>{
-    override fun from(i: PostUiModel?): PostEntityModel {
-        return PostEntityModel(
+class PostDomainUiMapper @Inject constructor() : Mapper<PostEntityModel, PostUiModel> {
+    override fun from(i: PostEntityModel?): PostUiModel {
+        return PostUiModel(
             userId = i?.userId,
             id = i?.id,
             title = i?.title,
@@ -16,8 +15,8 @@ class PostDomainUiMapper @Inject constructor()
         )
     }
 
-    override fun to(o: PostEntityModel?): PostUiModel {
-        return PostUiModel(
+    override fun to(o: PostUiModel?): PostEntityModel {
+        return PostEntityModel(
             userId = o?.userId,
             id = o?.id,
             title = o?.title,

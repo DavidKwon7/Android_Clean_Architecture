@@ -14,6 +14,7 @@ class GetPostsUseCase @Inject constructor(
     private val repository: Repository,
     @IoDispatcher private val dispatcher: CoroutineDispatcher
 ) : BaseUseCase<List<PostEntityModel>, Nothing>() {
+
     override suspend fun buildRequest(params: Nothing?): Flow<Resource<List<PostEntityModel>>> {
         return repository.getPosts().flowOn(dispatcher)
     }
