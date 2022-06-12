@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android_Clean_Architecture">
         <activity
+            android:name=".ui.feature.detail.DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.feature.main.MainActivity"
             android:exported="true">
             <intent-filter>
