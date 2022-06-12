@@ -1,7 +1,6 @@
-package com.example.android_clean_architecture
+package com.example.android_clean_architecture.ui.feature.base
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding

@@ -1,10 +1,8 @@
-package com.example.android_clean_architecture
+package com.example.android_clean_architecture.ui.feature.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.widget.Button
-import android.widget.TextView
+import com.example.android_clean_architecture.ui.feature.base.BaseActivity
 import com.example.android_clean_architecture.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
